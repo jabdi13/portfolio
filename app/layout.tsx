@@ -1,5 +1,7 @@
 import "./globals.css";
 import { Inter } from "next/font/google";
+import OmegaLogo from "../public/Ω.svg";
+import Image from "next/image";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,19 +20,27 @@ export default function RootLayout({
       <body className={inter.className}>
         <header>
           <a href="">
+            <Image src={OmegaLogo} alt="page logo" />
             <h6>Pepeloper</h6>
           </a>
-          <ul>
-            <li>
-              <a href="">Home</a>
-              <a href="">About</a>
-              <a href="">Projects</a>
-              <a href="">Contact</a>
-            </li>
-          </ul>
+          <nav>
+            <ul>
+              <li>
+                <a href="">Home</a>
+                <a href="">About</a>
+                <a href="">Projects</a>
+                <a href="">Contact</a>
+              </li>
+            </ul>
+          </nav>
         </header>
-        {children}
-        <footer></footer>
+        <main>{children}</main>
+        <footer>
+          <p>
+            Maquetado y diseñado con 💛 por{" "}
+            <strong>Abdiel Ortega y Esteban Ladino</strong> © 2023
+          </p>
+        </footer>
       </body>
     </html>
   );
