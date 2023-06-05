@@ -189,7 +189,7 @@ export default function Home() {
             </a>
           </li>
           <li>
-            <a href="">
+            <a href="mailto:jose.4.abdiel@gmail.com">
               <Image src={mailLogo} alt="Mail logo" />
             </a>
           </li>
