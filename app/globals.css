@@ -18,10 +18,42 @@
 
 body {
   color: rgb(var(--foreground-rgb));
+}
+
+body::-webkit-scrollbar {
+  width: 0.7em;
+  background: transparent;
+}
+body::-webkit-scrollbar-thumb {
+  background: #126ba3;
+  height: 30px;
+}
+
+body::-webkit-scrollbar-track-piece {
+  display: none;
+}
+
+.backgroundRadial {
+  background: rgb(14, 116, 180);
+  background: radial-gradient(
+    circle,
+    rgba(14, 116, 180, 1) 16%,
+    rgba(18, 83, 124, 1) 39%
+  );
+}
+
+.mainNav {
+  width: 95%;
+}
+
+.mainTitle {
+  color: rgb(19 140 215 / 28%);
+  font-size: 15rem;
   background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    180deg,
+    rgba(19, 140, 215, 0) 27%,
+    rgba(17, 107, 162, 1) 40%
+  );
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
 }
