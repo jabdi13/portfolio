@@ -26,17 +26,18 @@ export default function RootLayout({
           <nav>
             <ul>
               <li className="flex gap-5 text-lg font-medium">
-                <a href="">Home</a>
-                <a href="">About</a>
-                <a href="">Projects</a>
-                <a href="">Contact</a>
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
               </li>
             </ul>
           </nav>
         </header>
         <main className="">{children}</main>
-        <footer>
-          <p>
+        <footer className="bg-sky-600 py-5">
+          <p className="text-center">
             Maquetado y diseñado con 💛 por{" "}
             <strong>Abdiel Ortega y Esteban Ladino</strong> © 2023
           </p>
