@@ -1,6 +1,6 @@
 import "./globals.css";
 import { Inter } from "next/font/google";
-import OmegaLogo from "../public/Ω.svg";
+import OmegaLogo from "../public/omega-logo.svg";
 import Image from "next/image";
 import { Metadata } from "next";
 
@@ -9,7 +9,10 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Abdiel's Portfolio",
   description:
-    "Abdiel Ortega | Frontend developer with React.js | JavaScript Developer | CSS and HTML lover",
+    "Abdiel Ortega | Frontend developer with React.js | JavaScript Developer | CSS and HTML lover | 4 years of experience",
+  robots: "index, follow",
+  alternates: { canonical: "https://portfolio-abdieljortega.vercel.app/" },
+  icons: "./omega-logo.svg",
 };
 
 export default function RootLayout({
