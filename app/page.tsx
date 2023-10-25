@@ -129,7 +129,7 @@ export default function Home() {
             <li className="relative rounded-xl bg-[url('../public/images/project-2.jpg')] bg-cover px-10 py-16 shadow-xl transition duration-500 hover:scale-110">
               <div className="absolute inset-0 z-10 flex w-full items-center justify-center rounded-xl transition duration-500 hover:bg-slate-800/70">
                 <h5 className="relative z-20 text-center text-2xl tracking-widest">
-                  Instant job
+                  CrossClave
                 </h5>
               </div>
             </li>
