@@ -38,7 +38,7 @@ export default function Home() {
               </a>
             </li>
             <li>
-              <a target="_blank" href="https://github.com/abdielDev">
+              <a target="_blank" href="https://github.com/jabdi13">
                 <Image src={githubLogo} alt="GitHub logo" />
               </a>
             </li>
@@ -184,7 +184,7 @@ export default function Home() {
             </a>
           </li>
           <li>
-            <a target="_blank" href="https://github.com/abdielDev">
+            <a target="_blank" href="https://github.com/jabdi13">
               <Image src={githubLogo} alt="GitHub logo" />
             </a>
           </li>
