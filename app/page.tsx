@@ -3,15 +3,22 @@ import linkedinLogo from "../public/linkedin-icon.svg";
 import githubLogo from "../public/github-icon.svg";
 import mailLogo from "../public/mail-icon.svg";
 import phoneLogo from "../public/phone-icon.svg";
-import alphaIcon from "../public/alpha-icon.svg";
+import omegaInclinedIcon from "../public/omega-inclined.svg";
 import photoBG from "../public/photo-bg.png";
 
 export default function Home() {
   return (
     <>
-      <section id="home" className="backgroundRadial relative h-screen">
-        <h1 className="mainTitle absolute right-8 top-14 text-9xl">Abdiel</h1>
-        <article className="absolute left-28 top-2/4 w-5/12 -translate-y-2/4 space-y-10">
+      <section id="home" className="backgroundRadial relative sm:h-screen sm:block flex flex-col items-center -space-y-28">
+        <h1 className="mainTitle translate-y-6 sm:absolute sm:right-8 sm:top-14 text-center text-9xl w-full">Abdiel</h1>
+        <figure className="sm:absolute sm:bottom-0 sm:right-0 w-3/4 sm:w-1/3">
+          <Image
+            className="saturate-0 w-full"
+            src={photoBG}
+            alt="Professional posing"
+          />
+        </figure>
+        <article className="sm:absolute left-28 top-2/4 sm:w-5/12 sm:-translate-y-2/4 space-y-5 sm:space-y-10 p-5 sm:p-0">
           <h2 className="text-6xl">
             Software
             <br />
@@ -29,7 +36,7 @@ export default function Home() {
             Contact
           </a>
         </article>
-        <nav className="absolute bottom-14 left-28">
+        <nav className="hidden sm:block absolute bottom-14 left-28">
           <ul className="flex gap-7">
             <li>
               <a target="_blank" href="https://www.linkedin.com/in/pepeloper/">
@@ -57,20 +64,13 @@ export default function Home() {
             </li>
           </ul>
         </nav>
-        <figure>
-          <Image
-            className=" absolute bottom-0 right-0 w-1/3 saturate-0"
-            src={photoBG}
-            alt="Professional posing"
-          />
-        </figure>
       </section>
       <section
         id="about"
-        className="flex items-center justify-around bg-sky-600"
+        className="flex sm:flex-row flex-col gap-8 items-center justify-around bg-sky-600 relative p-4"
       >
-        <h3 className="text-4xl uppercase">About</h3>
-        <p className=" w-2/5 text-justify">
+        <h3 className="text-4xl uppercase z-10">About</h3>
+        <p className="sm:w-2/5 text-justify z-10">
           Hello! my name is <strong>Abdiel Ortega</strong> I am from
           Aguascalientes México. I have four years of experience in web
           development (<em>Frontend</em> and <em>Backend</em>) with{" "}
@@ -78,14 +78,14 @@ export default function Home() {
           trainning colleagues, solving problems, and communication. This has
           allowed me collaboration in international projects.
         </p>
-        <Image src={alphaIcon} alt="Alpha icon" />
+        <Image src={omegaInclinedIcon} alt="Omega icon" className="absolute sm:static z-0" />
       </section>
-      <section id="skills" className="bg-sky-500 px-32 py-20">
-        <article className="flex flex-col items-center space-y-10 rounded-3xl border-2 border-sky-600 bg-slate-900/20 px-24 py-10">
+      <section id="skills" className="bg-sky-500 sm:px-32 sm:py-20 z-10 relative">
+        <article className="flex flex-col items-center space-y-10 sm:rounded-3xl border-2 border-sky-600 bg-slate-900/20 px-14 sm:px-24 py-10">
           <h3 className="text-4xl uppercase">Skills</h3>
           <hr className=" w-5/6 border-y-2" />
-          <ul className="grid grid-cols-4 gap-x-24 gap-y-12">
-            <li className="rounded-2xl bg-gradient-to-br from-[#BCCB0C] to-[#BCCB0C] px-6 py-16">
+          <ul className="grid grid-cols-2 sm:grid-cols-4 gap-x-24 gap-y-12">
+            <li className="rounded-2xl bg-gradient-to-br from-[#E1ED5C] to-[#757F00] px-6 py-16">
               <h4 className="text-center text-2xl drop-shadow-lg">
                 JavaScript
               </h4>
@@ -114,12 +114,12 @@ export default function Home() {
           </ul>
         </article>
       </section>
-      <section id="projects" className="bg-sky-500 px-32 py-20">
-        <article className="flex flex-col items-center space-y-10 rounded-3xl border-2 border-sky-600 bg-slate-900/20 px-24 py-10">
+      <section id="projects" className="bg-sky-500 sm:px-32 sm:py-20">
+        <article className="flex flex-col items-center space-y-10 sm:rounded-3xl border-2 border-sky-600 bg-slate-900/20 px-14 sm:px-24 py-10">
           <h3 className="text-4xl uppercase">Projects</h3>
           <hr className="w-5/6 border-y-2" />
-          <ul className="grid w-full grid-cols-3 gap-4">
-            <li className=" relative rounded-xl bg-[url('../public/images/project-1.jpg')] bg-cover px-10 py-16 shadow-xl transition duration-500 hover:scale-110">
+          <ul className="grid w-full grid-cols-1 sm:grid-cols-3 gap-4">
+            <li className="relative rounded-xl bg-[url('../public/images/project-1.jpg')] bg-cover px-10 py-16 shadow-xl transition duration-500 hover:scale-110">
               <div className="absolute inset-0 z-10 flex w-full items-center justify-center rounded-xl transition duration-500 hover:bg-slate-800/70">
                 <h5 className="relative z-20 text-center text-2xl tracking-widest">
                   Augmented Staffing
@@ -164,9 +164,9 @@ export default function Home() {
           </ul>
         </article>
       </section>
-      <section id="contact" className="backgroundRadial space-y-24 px-96 py-24">
+      <section id="contact" className="backgroundRadial space-y-24 sm:px-96 sm:py-24 py-5">
         <h3 className="text-center text-4xl uppercase">Contact</h3>
-        <article className="flex justify-between">
+        <article className="flex sm:justify-between space-y-8 flex-col sm:flex-row">
           <div className="space-y-5 text-center">
             <h3 className="text-4xl">Email</h3>
             <p>jose.4.abdiel@gmail.com</p>
