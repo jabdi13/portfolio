@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <>
       <section id="home" className="backgroundRadial relative sm:h-screen sm:block flex flex-col items-center -space-y-28">
-        <h1 className="mainTitle translate-y-6 sm:absolute sm:right-8 sm:top-14 text-center text-9xl w-full">Abdiel</h1>
+        <h1 className="mainTitle translate-y-6 sm:absolute sm:right-8 sm:top-14 text-center text-9xl w-full sm:w-auto">Abdiel</h1>
         <figure className="sm:absolute sm:bottom-0 sm:right-0 w-3/4 sm:w-1/3">
           <Image
             className="saturate-0 w-full"
