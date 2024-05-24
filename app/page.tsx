@@ -25,7 +25,7 @@ export default function Home() {
             Developer
           </h2>
           <p>
-            Hello! my name is <strong>Abdiel Ortega</strong>. I have over 4
+            Hello! my name is <strong>Abdiel Ortega</strong>. I have 5
             years of experience developing web applications and I love sharing
             knowledge.
           </p>
