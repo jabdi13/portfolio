@@ -98,12 +98,13 @@ export default function Home() {
       >
         <h3 id="about-heading" className="text-4xl uppercase z-10">About</h3>
         <p className="sm:w-2/5 text-justify z-10">
-          Hello! my name is <strong>Abdiel Ortega</strong> I am from
-          Aguascalientes México. I have four years of experience in web
-          development (<em>Frontend</em> and <em>Backend</em>) with{" "}
-          <em>JavaScript</em> I have Soft skills to work as a team like
-          trainning colleagues, solving problems, and communication. This has
-          allowed me collaboration in international projects.
+          Hello! I'm <strong>Abdiel Ortega</strong>, a frontend developer based in
+          Aguascalientes, México, with 6 years of experience building web applications
+          using <em>JavaScript</em>, <em>React</em>, and <em>Node.js</em>. I specialize
+          in crafting intuitive user interfaces and scalable solutions for both startups
+          and enterprise clients. Beyond coding, I'm passionate about mentoring teammates,
+          solving complex problems, and collaborating on international projects that make
+          an impact.
         </p>
         <Image src={omegaInclinedIcon} alt="" aria-hidden="true" className="absolute sm:static z-0" />
       </section>
