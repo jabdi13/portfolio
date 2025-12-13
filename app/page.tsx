@@ -35,7 +35,7 @@ export default function Home() {
               href="#contact"
               className="inline-flex items-center gap-2 rounded-xl bg-gold-500 px-8 py-3.5 text-xl text-navy font-semibold shadow-lg hover:shadow-xl hover:bg-gold-600 transition-all duration-300 hover:-translate-y-0.5 focus-visible:ring-4 focus-visible:ring-gold-400"
             >
-              <span>Let's Talk</span>
+              <span>Let&apos;s Talk</span>
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
@@ -98,11 +98,11 @@ export default function Home() {
       >
         <h3 id="about-heading" className="text-4xl uppercase z-10">About</h3>
         <p className="sm:w-2/5 text-justify z-10">
-          Hello! I'm <strong>Abdiel Ortega</strong>, a frontend developer based in
+          Hello! I&apos;m <strong>Abdiel Ortega</strong>, a frontend developer based in
           Aguascalientes, México, with 6 years of experience building web applications
           using <em>JavaScript</em>, <em>React</em>, and <em>Node.js</em>. I specialize
           in crafting intuitive user interfaces and scalable solutions for both startups
-          and enterprise clients. Beyond coding, I'm passionate about mentoring teammates,
+          and enterprise clients. Beyond coding, I&apos;m passionate about mentoring teammates,
           solving complex problems, and collaborating on international projects that make
           an impact.
         </p>
@@ -211,7 +211,7 @@ export default function Home() {
               <div className="relative z-10 p-6 h-full flex flex-col justify-end min-h-[300px]">
                 <h5 className="text-2xl font-bold mb-2 tracking-wide">Neobit</h5>
                 <p className="text-sm text-gray-300 mb-3 line-clamp-2 group-hover:line-clamp-none transition-all">
-                  Asteroid tracking application featuring real-time data from NASA's Near Earth Object API.
+                  Asteroid tracking application featuring real-time data from NASA&apos;s Near Earth Object API.
                 </p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   <span className="text-xs px-2 py-1 bg-sky-600/50 rounded-full border border-sky-400/30">React</span>
