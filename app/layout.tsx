@@ -1,7 +1,7 @@
 import "./globals.css";
 import { Inter } from "next/font/google";
-import { NavHeader } from "./components/NavHeader"
 import { Metadata } from "next";
+import { ClientLayout } from "./components/ClientLayout";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,21 +21,25 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              try {
+                const savedMode = localStorage.getItem('darkMode');
+                const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                if (savedMode === 'true' || (savedMode === null && prefersDark)) {
+                  document.documentElement.classList.add('dark');
+                }
+              } catch (e) {}
+            `,
+          }}
+        />
+      </head>
       <body className={inter.className}>
-        <a
-          href="#main-content"
-          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:bg-gold-500 focus:text-navy focus:px-6 focus:py-3 focus:rounded-lg focus:font-semibold focus:outline-none focus:ring-4 focus:ring-gold-600"
-        >
-          Skip to main content
-        </a>
-        <NavHeader />
-        {children}
-        <footer className="bg-powder-500 py-5">
-          <p className="text-center">
-            Layout and designed with 💛 by{" "}
-            <strong>Abdiel Ortega and Esteban Ladino</strong> © 2023
-          </p>
-        </footer>
+        <ClientLayout>
+          {children}
+        </ClientLayout>
       </body>
     </html>
   );

@@ -30,8 +30,19 @@ body::-webkit-scrollbar-thumb {
   height: 30px;
 }
 
+/* Dark mode scrollbar */
+.dark body::-webkit-scrollbar-thumb {
+  background: #ffb612;
+}
+
 body::-webkit-scrollbar-track-piece {
   display: none;
+}
+
+/* Smooth scroll with offset for fixed navigation */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
 }
 
 .backgroundRadial {
@@ -44,20 +55,32 @@ body::-webkit-scrollbar-track-piece {
   );
 }
 
+/* Dark mode: Navy background with gold accents */
+.dark .backgroundRadial {
+  background: #002244;
+  background: radial-gradient(
+    circle,
+    #002244 0%,
+    #001a33 50%,
+    #000f1f 100%
+  );
+}
+
 .mainNav {
   width: 95%;
 }
 
 .mainTitle {
-  color: rgb(0 123 199 / 28%);
-  font-size: 14rem;
+  font-size: 12rem;
   background: linear-gradient(
     180deg,
-    rgba(0, 123, 199, 0) 27%,
-    rgba(0, 102, 166, 1) 40%
+    rgba(255, 182, 18, 0.5) 0%,
+    rgba(255, 182, 18, 1) 40%,
+    rgba(230, 154, 0, 1) 100%
   );
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
+  background-clip: text;
 }
 
 @media (min-width: 640px) {

@@ -10,9 +10,9 @@ import { SiJavascript, SiNodedotjs, SiGithub, SiReact, SiRedux, SiHtml5, SiVuedo
 export default function Home() {
   return (
     <main id="main-content" role="main">
-      <section id="home" aria-label="Introduction" className="backgroundRadial relative sm:h-screen sm:block flex flex-col items-center -space-y-28">
-        <h1 className="mainTitle translate-y-6 sm:absolute sm:right-8 sm:top-14 text-center text-9xl w-full sm:w-auto">Abdiel</h1>
-        <figure className="sm:absolute sm:bottom-0 sm:right-0 w-3/4 sm:w-1/3">
+      <section id="home" aria-label="Introduction" className="backgroundRadial relative sm:h-screen sm:block flex flex-col items-center -space-y-28 dark:text-white">
+        <h1 className="mainTitle translate-y-24 sm:absolute sm:right-8 sm:top-14 text-center text-9xl w-full sm:w-auto">Abdiel</h1>
+        <figure className="sm:absolute sm:bottom-0 translate-y-6 sm:right-0 w-3/4 sm:w-1/3">
           <Image
             className="saturate-0 w-full"
             src={photoBG}
@@ -94,7 +94,7 @@ export default function Home() {
       <section
         id="about"
         aria-labelledby="about-heading"
-        className="flex sm:flex-row flex-col gap-8 items-center justify-around bg-powder-500 relative p-4"
+        className="flex sm:flex-row flex-col gap-8 items-center justify-around bg-powder-500 dark:bg-navy relative p-4 dark:text-white"
       >
         <h3 id="about-heading" className="text-4xl uppercase z-10">About</h3>
         <p className="sm:w-2/5 text-justify z-10">
@@ -108,8 +108,8 @@ export default function Home() {
         </p>
         <Image src={omegaInclinedIcon} alt="" aria-hidden="true" className="absolute sm:static z-0" />
       </section>
-      <section id="skills" aria-labelledby="skills-heading" className="bg-powder-400 sm:px-32 sm:py-20 z-10 relative">
-        <article className="flex flex-col items-center space-y-10 sm:rounded-3xl border-2 border-powder-600 bg-slate-900/20 px-14 sm:px-24 py-10">
+      <section id="skills" aria-labelledby="skills-heading" className="bg-powder-400 dark:bg-slate-900 sm:px-32 sm:py-20 z-10 relative">
+        <article className="flex flex-col items-center space-y-10 sm:rounded-3xl border-2 border-powder-600 dark:border-gold-500/30 bg-slate-900/20 dark:bg-navy/50 px-14 sm:px-24 py-10">
           <h3 id="skills-heading" className="text-4xl uppercase">Skills</h3>
           <hr className=" w-5/6 border-y-2" />
           <ul className="grid grid-cols-2 sm:grid-cols-4 gap-x-24 gap-y-12">
@@ -150,8 +150,8 @@ export default function Home() {
           </ul>
         </article>
       </section>
-      <section id="projects" aria-labelledby="projects-heading" className="bg-powder-400 sm:px-32 sm:py-20">
-        <article className="flex flex-col items-center space-y-10 sm:rounded-3xl border-2 border-powder-600 bg-slate-900/20 px-14 sm:px-24 py-10">
+      <section id="projects" aria-labelledby="projects-heading" className="bg-powder-400 dark:bg-slate-900 sm:px-32 sm:py-20">
+        <article className="flex flex-col items-center space-y-10 sm:rounded-3xl border-2 border-powder-600 dark:border-gold-500/30 bg-slate-900/20 dark:bg-navy/50 px-14 sm:px-24 py-10">
           <h3 id="projects-heading" className="text-4xl uppercase">Projects</h3>
           <hr className="w-5/6 border-y-2" />
           <ul className="grid w-full grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -307,7 +307,7 @@ export default function Home() {
           </ul>
         </article>
       </section>
-      <section id="contact" aria-labelledby="contact-heading" className="backgroundRadial space-y-24 sm:px-96 sm:py-24 py-5">
+      <section id="contact" aria-labelledby="contact-heading" className="backgroundRadial dark:text-white space-y-24 sm:px-96 sm:py-24 py-5">
         <h3 id="contact-heading" className="text-center text-4xl uppercase">Contact</h3>
         <article className="flex sm:justify-between space-y-8 flex-col sm:flex-row">
           <div className="space-y-5 text-center">
