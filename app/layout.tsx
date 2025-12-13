@@ -21,10 +21,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="relative">
+      <body className={inter.className}>
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:bg-gold-500 focus:text-navy focus:px-6 focus:py-3 focus:rounded-lg focus:font-semibold focus:outline-none focus:ring-4 focus:ring-gold-600"
+        >
+          Skip to main content
+        </a>
         <NavHeader />
-        <main className="">{children}</main>
-        <footer className="bg-sky-600 py-5">
+        {children}
+        <footer className="bg-powder-500 py-5">
           <p className="text-center">
             Layout and designed with 💛 by{" "}
             <strong>Abdiel Ortega and Esteban Ladino</strong> © 2023
