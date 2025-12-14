@@ -10,16 +10,17 @@ import { SiJavascript, SiNodedotjs, SiGithub, SiReact, SiRedux, SiHtml5, SiVuedo
 export default function Home() {
   return (
     <main id="main-content" role="main">
-      <section id="home" aria-label="Introduction" className="backgroundRadial relative sm:h-screen sm:block flex flex-col items-center -space-y-28 dark:text-white">
-        <h1 className="mainTitle translate-y-24 sm:absolute sm:right-8 sm:top-14 text-center text-9xl w-full sm:w-auto">Abdiel</h1>
-        <figure className="sm:absolute sm:bottom-0 translate-y-6 sm:right-0 w-3/4 sm:w-1/3">
+      <section id="home" aria-label="Introduction" className="backgroundRadial relative sm:h-screen flex flex-col items-center justify-center sm:justify-start dark:text-white py-10 sm:py-0">
+        <h1 className="mainTitle sm:absolute sm:right-8 sm:top-14 text-center text-9xl w-full sm:w-auto mb-8 mt-24 sm:mb-0">Abdiel</h1>
+
+        <figure className="hidden sm:block sm:absolute sm:bottom-0 sm:right-0 sm:w-1/3">
           <Image
             className="saturate-0 w-full"
             src={photoBG}
             alt="Abdiel Ortega, Software Developer, professional headshot"
           />
         </figure>
-        <article className="sm:absolute sm:left-28 sm:top-2/4 sm:w-5/12 sm:-translate-y-2/4 space-y-5 sm:space-y-10 p-5 sm:p-0">
+        <article className="sm:absolute sm:left-28 sm:top-2/4 sm:w-5/12 sm:-translate-y-2/4 space-y-5 sm:space-y-10 px-5 sm:p-0 max-w-lg sm:max-w-none">
           <h2 className="text-6xl">
             Software
             <br />
@@ -97,7 +98,7 @@ export default function Home() {
         className="flex sm:flex-row flex-col gap-8 items-center justify-around bg-powder-500 dark:bg-navy relative p-4 dark:text-white"
       >
         <h3 id="about-heading" className="text-4xl uppercase z-10">About</h3>
-        <p className="sm:w-2/5 text-justify z-10">
+        <p className="sm:w-2/5 text-start z-10">
           Hello! I&apos;m <strong>Abdiel Ortega</strong>, a frontend developer based in
           Aguascalientes, México, with 6 years of experience building web applications
           using <em>JavaScript</em>, <em>React</em>, and <em>Node.js</em>. I specialize
@@ -109,43 +110,43 @@ export default function Home() {
         <Image src={omegaInclinedIcon} alt="" aria-hidden="true" className="absolute sm:static z-0" />
       </section>
       <section id="skills" aria-labelledby="skills-heading" className="bg-powder-400 dark:bg-slate-900 sm:px-32 sm:py-20 z-10 relative">
-        <article className="flex flex-col items-center space-y-10 sm:rounded-3xl border-2 border-powder-600 dark:border-gold-500/30 bg-slate-900/20 dark:bg-navy/50 px-14 sm:px-24 py-10">
+        <article className="flex flex-col items-center space-y-10 sm:rounded-3xl border-2 border-powder-600 dark:border-gold-500/30 bg-slate-900/20 dark:bg-navy/50 px-4 sm:px-24 py-10">
           <h3 id="skills-heading" className="text-4xl uppercase">Skills</h3>
           <hr className=" w-5/6 border-y-2" />
-          <ul className="grid grid-cols-2 sm:grid-cols-4 gap-x-24 gap-y-12">
-            <li className="relative rounded-2xl bg-gradient-to-br from-[#E1ED5C] to-[#757F00] px-6 py-16 overflow-hidden">
-              <SiJavascript className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[120px] opacity-20" />
-              <h4 className="relative text-center text-2xl drop-shadow-lg z-10">
+          <ul className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-x-24 sm:gap-y-12">
+            <li className="relative rounded-2xl bg-gradient-to-br from-[#E1ED5C] to-[#757F00] px-4 py-12 sm:px-6 sm:py-16 overflow-hidden">
+              <SiJavascript className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[80px] sm:text-[120px] opacity-20" />
+              <h4 className="relative text-center text-lg sm:text-2xl drop-shadow-lg z-10">
                 JavaScript
               </h4>
             </li>
-            <li className="relative rounded-2xl bg-gradient-to-br from-[#61df14] to-[#2D8803] px-6 py-16 overflow-hidden">
-              <SiNodedotjs className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[120px] opacity-20" />
-              <h4 className="relative text-center text-2xl drop-shadow-lg z-10">NodeJS</h4>
+            <li className="relative rounded-2xl bg-gradient-to-br from-[#61df14] to-[#2D8803] px-4 py-12 sm:px-6 sm:py-16 overflow-hidden">
+              <SiNodedotjs className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[80px] sm:text-[120px] opacity-20" />
+              <h4 className="relative text-center text-lg sm:text-2xl drop-shadow-lg z-10">NodeJS</h4>
             </li>
-            <li className="relative rounded-2xl bg-gradient-to-br from-[#535353] to-[#343434] px-6 py-16 overflow-hidden">
-              <SiGithub className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[120px] opacity-20" />
-              <h4 className="relative text-center text-2xl drop-shadow-lg z-10">GitHub</h4>
+            <li className="relative rounded-2xl bg-gradient-to-br from-[#535353] to-[#343434] px-4 py-12 sm:px-6 sm:py-16 overflow-hidden">
+              <SiGithub className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[80px] sm:text-[120px] opacity-20" />
+              <h4 className="relative text-center text-lg sm:text-2xl drop-shadow-lg z-10">GitHub</h4>
             </li>
-            <li className="relative rounded-2xl bg-gradient-to-br from-[#04BEFE] to-[#4481EB] px-6 py-16 overflow-hidden">
-              <SiReact className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[120px] opacity-20" />
-              <h4 className="relative text-center text-2xl drop-shadow-lg z-10">React</h4>
+            <li className="relative rounded-2xl bg-gradient-to-br from-[#04BEFE] to-[#4481EB] px-4 py-12 sm:px-6 sm:py-16 overflow-hidden">
+              <SiReact className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[80px] sm:text-[120px] opacity-20" />
+              <h4 className="relative text-center text-lg sm:text-2xl drop-shadow-lg z-10">React</h4>
             </li>
-            <li className="relative rounded-2xl bg-gradient-to-br from-[#7521FF] to-[#2C0EA6] px-6 py-16 overflow-hidden">
-              <SiRedux className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[120px] opacity-20" />
-              <h4 className="relative text-center text-2xl drop-shadow-lg z-10">Redux</h4>
+            <li className="relative rounded-2xl bg-gradient-to-br from-[#7521FF] to-[#2C0EA6] px-4 py-12 sm:px-6 sm:py-16 overflow-hidden">
+              <SiRedux className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[80px] sm:text-[120px] opacity-20" />
+              <h4 className="relative text-center text-lg sm:text-2xl drop-shadow-lg z-10">Redux</h4>
             </li>
-            <li className="relative rounded-2xl bg-gradient-to-br from-[#F5990F] to-[#CB7E0C] px-6 py-16 overflow-hidden">
-              <SiHtml5 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[120px] opacity-20" />
-              <h4 className="relative text-center text-2xl drop-shadow-lg z-10">HTML</h4>
+            <li className="relative rounded-2xl bg-gradient-to-br from-[#F5990F] to-[#CB7E0C] px-4 py-12 sm:px-6 sm:py-16 overflow-hidden">
+              <SiHtml5 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[80px] sm:text-[120px] opacity-20" />
+              <h4 className="relative text-center text-lg sm:text-2xl drop-shadow-lg z-10">HTML</h4>
             </li>
-            <li className="relative rounded-2xl bg-gradient-to-br from-[#01C77F] to-[#017358] px-6 py-16 overflow-hidden">
-              <SiVuedotjs className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[120px] opacity-20" />
-              <h4 className="relative text-center text-2xl drop-shadow-lg z-10">Vue</h4>
+            <li className="relative rounded-2xl bg-gradient-to-br from-[#01C77F] to-[#017358] px-4 py-12 sm:px-6 sm:py-16 overflow-hidden">
+              <SiVuedotjs className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[80px] sm:text-[120px] opacity-20" />
+              <h4 className="relative text-center text-lg sm:text-2xl drop-shadow-lg z-10">Vue</h4>
             </li>
-            <li className="relative rounded-2xl bg-gradient-to-br from-[#C13FB4] to-[#7E177A] px-6 py-16 overflow-hidden">
-              <SiSass className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[120px] opacity-20" />
-              <h4 className="relative text-center text-2xl drop-shadow-lg z-10">Sass</h4>
+            <li className="relative rounded-2xl bg-gradient-to-br from-[#C13FB4] to-[#7E177A] px-4 py-12 sm:px-6 sm:py-16 overflow-hidden">
+              <SiSass className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[80px] sm:text-[120px] opacity-20" />
+              <h4 className="relative text-center text-lg sm:text-2xl drop-shadow-lg z-10">Sass</h4>
             </li>
           </ul>
         </article>
