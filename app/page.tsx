@@ -19,7 +19,7 @@ export default function Home() {
             alt="Abdiel Ortega, Software Developer, professional headshot"
           />
         </figure>
-        <article className="sm:absolute left-28 top-2/4 sm:w-5/12 sm:-translate-y-2/4 space-y-5 sm:space-y-10 p-5 sm:p-0">
+        <article className="sm:absolute sm:left-28 sm:top-2/4 sm:w-5/12 sm:-translate-y-2/4 space-y-5 sm:space-y-10 p-5 sm:p-0">
           <h2 className="text-6xl">
             Software
             <br />
