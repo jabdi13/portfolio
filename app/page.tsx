@@ -5,6 +5,12 @@ import mailLogo from "../public/mail-icon.svg";
 import phoneLogo from "../public/phone-icon.svg";
 import omegaInclinedIcon from "../public/omega-inclined.svg";
 import photoBG from "../public/photo-bg.png";
+import project1 from "../public/images/project-1.jpg";
+import project2 from "../public/images/project-2.jpg";
+import project3 from "../public/images/project-3.jpg";
+import project4 from "../public/images/project-4.jpg";
+import project5 from "../public/images/project-5.jpg";
+import project6 from "../public/images/project-6.jpg";
 import { SiJavascript, SiNodedotjs, SiGithub, SiReact, SiRedux, SiHtml5, SiVuedotjs, SiSass } from 'react-icons/si';
 
 export default function Home() {
@@ -158,7 +164,15 @@ export default function Home() {
           <ul className="grid w-full grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {/* Project 1 - Augmented Staffing */}
             <li className="group relative rounded-xl overflow-hidden shadow-xl transition-all duration-500 hover:shadow-2xl hover:-translate-y-2">
-              <div className="absolute inset-0 bg-[url('../public/images/project-1.jpg')] bg-cover bg-center transition-transform duration-500 group-hover:scale-110" />
+              <Image
+                src={project1}
+                alt="Augmented Staffing platform screenshot"
+                fill
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                className="object-cover transition-transform duration-500 group-hover:scale-110"
+                quality={85}
+                priority
+              />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/70 to-transparent group-hover:from-slate-900/95 group-hover:via-slate-900/85 transition-all duration-500" />
               <div className="relative z-10 p-6 h-full flex flex-col justify-end min-h-[300px]">
                 <h5 className="text-2xl font-bold mb-2 tracking-wide">Augmented Staffing</h5>
@@ -183,7 +197,14 @@ export default function Home() {
 
             {/* Project 2 - CrossClave */}
             <li className="group relative rounded-xl overflow-hidden shadow-xl transition-all duration-500 hover:shadow-2xl hover:-translate-y-2">
-              <div className="absolute inset-0 bg-[url('../public/images/project-2.jpg')] bg-cover bg-center transition-transform duration-500 group-hover:scale-110" />
+              <Image
+                src={project2}
+                alt="CrossClave secure communication platform"
+                fill
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                className="object-cover transition-transform duration-500 group-hover:scale-110"
+                quality={85}
+              />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/70 to-transparent group-hover:from-slate-900/95 group-hover:via-slate-900/85 transition-all duration-500" />
               <div className="relative z-10 p-6 h-full flex flex-col justify-end min-h-[300px]">
                 <h5 className="text-2xl font-bold mb-2 tracking-wide">CrossClave</h5>
@@ -207,7 +228,14 @@ export default function Home() {
 
             {/* Project 3 - Neobit */}
             <li className="group relative rounded-xl overflow-hidden shadow-xl transition-all duration-500 hover:shadow-2xl hover:-translate-y-2">
-              <div className="absolute inset-0 bg-[url('../public/images/project-3.jpg')] bg-cover bg-center transition-transform duration-500 group-hover:scale-110" />
+              <Image
+                src={project3}
+                alt="Neobit asteroid tracking application"
+                fill
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                className="object-cover transition-transform duration-500 group-hover:scale-110"
+                quality={85}
+              />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/70 to-transparent group-hover:from-slate-900/95 group-hover:via-slate-900/85 transition-all duration-500" />
               <div className="relative z-10 p-6 h-full flex flex-col justify-end min-h-[300px]">
                 <h5 className="text-2xl font-bold mb-2 tracking-wide">Neobit</h5>
@@ -232,7 +260,14 @@ export default function Home() {
 
             {/* Project 4 - Yelpcamp */}
             <li className="group relative rounded-xl overflow-hidden shadow-xl transition-all duration-500 hover:shadow-2xl hover:-translate-y-2">
-              <div className="absolute inset-0 bg-[url('../public/images/project-4.jpg')] bg-cover bg-center transition-transform duration-500 group-hover:scale-110" />
+              <Image
+                src={project4}
+                alt="Yelpcamp campground review platform"
+                fill
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                className="object-cover transition-transform duration-500 group-hover:scale-110"
+                quality={85}
+              />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/70 to-transparent group-hover:from-slate-900/95 group-hover:via-slate-900/85 transition-all duration-500" />
               <div className="relative z-10 p-6 h-full flex flex-col justify-end min-h-[300px]">
                 <h5 className="text-2xl font-bold mb-2 tracking-wide">Yelpcamp</h5>
@@ -257,7 +292,14 @@ export default function Home() {
 
             {/* Project 5 - Hi sitter */}
             <li className="group relative rounded-xl overflow-hidden shadow-xl transition-all duration-500 hover:shadow-2xl hover:-translate-y-2">
-              <div className="absolute inset-0 bg-[url('../public/images/project-5.jpg')] bg-cover bg-center transition-transform duration-500 group-hover:scale-110" />
+              <Image
+                src={project5}
+                alt="Hi sitter babysitter marketplace"
+                fill
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                className="object-cover transition-transform duration-500 group-hover:scale-110"
+                quality={85}
+              />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/70 to-transparent group-hover:from-slate-900/95 group-hover:via-slate-900/85 transition-all duration-500" />
               <div className="relative z-10 p-6 h-full flex flex-col justify-end min-h-[300px]">
                 <h5 className="text-2xl font-bold mb-2 tracking-wide">Hi sitter</h5>
@@ -282,7 +324,14 @@ export default function Home() {
 
             {/* Project 6 - Wawa */}
             <li className="group relative rounded-xl overflow-hidden shadow-xl transition-all duration-500 hover:shadow-2xl hover:-translate-y-2">
-              <div className="absolute inset-0 bg-[url('../public/images/project-6.jpg')] bg-cover bg-center transition-transform duration-500 group-hover:scale-110" />
+              <Image
+                src={project6}
+                alt="Wawa pet management platform"
+                fill
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                className="object-cover transition-transform duration-500 group-hover:scale-110"
+                quality={85}
+              />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/70 to-transparent group-hover:from-slate-900/95 group-hover:via-slate-900/85 transition-all duration-500" />
               <div className="relative z-10 p-6 h-full flex flex-col justify-end min-h-[300px]">
                 <h5 className="text-2xl font-bold mb-2 tracking-wide">Wawa</h5>

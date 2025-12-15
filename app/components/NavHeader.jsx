@@ -2,7 +2,8 @@
 import { BurgerIconMenu } from "./BurgerIconMenu"
 import { CloseMenu } from "./CloseMenu"
 import { DarkModeToggle } from "./DarkModeToggle"
-import OmegaLogo from "../../public/omega-logo.svg";
+import OmegaDark from "../../public/images/omega-dark-200.webp";
+import OmegaPowder from "../../public/images/omega-powder-200.webp";
 import Image from "next/image";
 import { useState } from "react";
 
@@ -19,7 +20,24 @@ export function NavHeader() {
   return (
     <header className="mainNav absolute left-2/4 top-6 z-10 flex -translate-x-2/4 justify-between items-center rounded-3xl bg-white dark:bg-navy p-5 text-powder-900 dark:text-white shadow-lg dark:shadow-gold-500/20">
       <a href="" className="flex gap-4 items-center z-20 relative">
-        <Image src={OmegaLogo} alt="page logo" priority className="flex-shrink-0" />
+        <div className="relative w-10 h-10 flex-shrink-0">
+          <Image
+            src={OmegaPowder}
+            alt="page logo"
+            priority
+            width={40}
+            height={40}
+            className="absolute inset-0 dark:hidden"
+          />
+          <Image
+            src={OmegaDark}
+            alt="page logo"
+            priority
+            width={40}
+            height={40}
+            className="absolute inset-0 hidden dark:block"
+          />
+        </div>
         <h6 className="text-xl font-bold uppercase tracking-wider">
           J Abdi Dev
         </h6>

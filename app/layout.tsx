@@ -11,7 +11,11 @@ export const metadata: Metadata = {
     "Abdiel Ortega | Frontend developer with React.js | JavaScript Developer | CSS and HTML lover | 4 years of experience | Semi Senior developer | Software developer",
   robots: "index, follow",
   alternates: { canonical: "https://portfolio-abdieljortega.vercel.app/" },
-  icons: { icon: "./omega-logo.svg", apple: "./omega-logo.svg" },
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
+  manifest: "/manifest.json",
 };
 
 export default function RootLayout({
