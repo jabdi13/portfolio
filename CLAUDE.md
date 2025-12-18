@@ -132,3 +132,5 @@ The project uses Next.js Image optimization with automatic format conversion:
 
 ### To-Do Items
 - [ ] **Manually convert omega logo to SVG**: The auto-generated SVG files (`omega-dark.svg`, `omega-powder.svg`) need to be properly converted manually. Files are in `public/images/`. Once properly converted, update `app/layout.tsx` to use SVG favicon format for better scaling.
+- [ ] **Add CV files in English and Spanish**: Add downloadable CV/resume PDFs to `public/cv/` directory. Files should be named `abdiel-ortega-cv-en.pdf` and `abdiel-ortega-cv-es.pdf`. Update the ContactSection component to serve the appropriate CV based on the current locale.
+- [ ] **Add more skills**: Expand the Skills section with additional technologies (e.g., TypeScript, Next.js, Tailwind CSS, MongoDB, GraphQL, etc.). Add corresponding translations in `messages/en.json` and `messages/es.json`, and update `design-tokens.ts` with new skill color gradients.
