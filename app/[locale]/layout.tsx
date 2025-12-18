@@ -1,14 +1,16 @@
-import "./globals.css";
+import "../globals.css";
 import { Inter } from "next/font/google";
 import { Metadata } from "next";
-import { ClientLayout } from "./components/ClientLayout";
+import { ClientLayout } from "../components/ClientLayout";
+import { NextIntlClientProvider } from 'next-intl';
+import { getMessages } from 'next-intl/server';
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Abdiel's Portfolio",
   description:
-    "Abdiel Ortega | Frontend developer with React.js | JavaScript Developer | CSS and HTML lover | 4 years of experience | Semi Senior developer | Software developer",
+    "Abdiel Ortega | Frontend developer with React.js | JavaScript Developer | CSS and HTML lover | 6 years of experience | Senior developer | Software developer",
   robots: "index, follow",
   alternates: { canonical: "https://portfolio-abdieljortega.vercel.app/" },
   icons: {
@@ -18,13 +20,18 @@ export const metadata: Metadata = {
   manifest: "/manifest.json",
 };
 
-export default function RootLayout({
+export default async function LocaleLayout({
   children,
+  params: { locale }
 }: {
   children: React.ReactNode;
+  params: { locale: string };
 }) {
+  // Providing all messages to the client side is the easiest way to get started
+  const messages = await getMessages();
+
   return (
-    <html lang="en">
+    <html lang={locale}>
       <head>
         <script
           dangerouslySetInnerHTML={{
@@ -41,9 +48,11 @@ export default function RootLayout({
         />
       </head>
       <body className={inter.className}>
-        <ClientLayout>
-          {children}
-        </ClientLayout>
+        <NextIntlClientProvider messages={messages}>
+          <ClientLayout>
+            {children}
+          </ClientLayout>
+        </NextIntlClientProvider>
       </body>
     </html>
   );

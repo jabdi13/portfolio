@@ -1,0 +1,88 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "about": "Acerca de",
+    "skills": "Habilidades",
+    "projects": "Proyectos",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "title": "Abdiel",
+    "role": "Desarrollador de Software",
+    "description": "¡Hola! mi nombre es <strong>Abdiel Ortega</strong>. Tengo 6 años de experiencia desarrollando aplicaciones web y me encanta compartir conocimiento.",
+    "letsTalk": "Hablemos",
+    "viewProjects": "Ver Proyectos",
+    "photoAlt": "Abdiel Ortega, Desarrollador de Software, foto profesional"
+  },
+  "about": {
+    "heading": "Acerca de",
+    "description": "¡Hola! Soy <strong>Abdiel Ortega</strong>, un desarrollador frontend con sede en Aguascalientes, México, con 6 años de experiencia construyendo aplicaciones web usando <em>JavaScript</em>, <em>React</em> y <em>Node.js</em>. Me especializo en crear interfaces de usuario intuitivas y soluciones escalables tanto para startups como para clientes empresariales. Más allá de la programación, me apasiona mentorear a mis compañeros de equipo, resolver problemas complejos y colaborar en proyectos internacionales que generen un impacto."
+  },
+  "skills": {
+    "heading": "Habilidades",
+    "javascript": "JavaScript",
+    "nodejs": "NodeJS",
+    "github": "GitHub",
+    "react": "React",
+    "redux": "Redux",
+    "html": "HTML",
+    "vue": "Vue",
+    "sass": "Sass"
+  },
+  "projects": {
+    "heading": "Proyectos",
+    "augmentedStaffing": {
+      "title": "Augmented Staffing",
+      "description": "Aplicación web full-stack para la adquisición y gestión de talento en la industria tecnológica."
+    },
+    "crossclave": {
+      "title": "CrossClave",
+      "description": "Plataforma de pagos transfronterizos que conecta México y Estados Unidos."
+    },
+    "neobit": {
+      "title": "Neobit",
+      "description": "Aplicación para usar la API de la NASA para visualizar datos espaciales."
+    },
+    "yelpcamp": {
+      "title": "Yelpcamp",
+      "description": "Plataforma full-stack de reseñas de campamentos construida con Node.js y MongoDB."
+    },
+    "hisitter": {
+      "title": "Hi sitter",
+      "description": "Plataforma de reserva de servicios de niñera y cuidado infantil."
+    },
+    "wawa": {
+      "title": "Wawa",
+      "description": "Aplicación para adoptar mascotas y localizarlas."
+    },
+    "viewLive": "Ver en Vivo",
+    "github": "GitHub"
+  },
+  "contact": {
+    "heading": "Contacto",
+    "email": "Correo Electrónico",
+    "phoneNumber": "Número de Teléfono",
+    "copy": "Copiar",
+    "copied": "¡Copiado!",
+    "copyToClipboard": "Copiar {field} al portapapeles",
+    "downloadCV": "Descargar CV"
+  },
+  "footer": {
+    "text": "Diseñado con 💛 por <strong>Abdiel Ortega y Esteban Ladino</strong> © 2023"
+  },
+  "a11y": {
+    "skipToContent": "Saltar al contenido principal"
+  },
+  "aria": {
+    "closeMenu": "Cerrar menú de navegación",
+    "openMenu": "Abrir menú de navegación",
+    "switchToLight": "Cambiar a modo claro",
+    "switchToDark": "Cambiar a modo oscuro",
+    "mainContent": "Contenido principal"
+  },
+  "language": {
+    "select": "Seleccionar idioma",
+    "english": "Inglés",
+    "spanish": "Español"
+  }
+}

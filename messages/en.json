@@ -1,0 +1,88 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Abdiel",
+    "role": "Software Developer",
+    "description": "Hello! my name is <strong>Abdiel Ortega</strong>. I have 6 years of experience developing web applications and I love sharing knowledge.",
+    "letsTalk": "Let's Talk",
+    "viewProjects": "View Projects",
+    "photoAlt": "Abdiel Ortega, Software Developer, professional headshot"
+  },
+  "about": {
+    "heading": "About",
+    "description": "Hello! I'm <strong>Abdiel Ortega</strong>, a frontend developer based in Aguascalientes, México, with 6 years of experience building web applications using <em>JavaScript</em>, <em>React</em>, and <em>Node.js</em>. I specialize in crafting intuitive user interfaces and scalable solutions for both startups and enterprise clients. Beyond coding, I'm passionate about mentoring teammates, solving complex problems, and collaborating on international projects that make an impact."
+  },
+  "skills": {
+    "heading": "Skills",
+    "javascript": "JavaScript",
+    "nodejs": "NodeJS",
+    "github": "GitHub",
+    "react": "React",
+    "redux": "Redux",
+    "html": "HTML",
+    "vue": "Vue",
+    "sass": "Sass"
+  },
+  "projects": {
+    "heading": "Projects",
+    "augmentedStaffing": {
+      "title": "Augmented Staffing",
+      "description": "Full-stack web application for talent acquisition and management in the tech industry."
+    },
+    "crossclave": {
+      "title": "CrossClave",
+      "description": "Cross-border payment platform connecting Mexico and the United States."
+    },
+    "neobit": {
+      "title": "Neobit",
+      "description": "Application to use NASA API to visualize space data."
+    },
+    "yelpcamp": {
+      "title": "Yelpcamp",
+      "description": "Full-stack camping site review platform built with Node.js and MongoDB."
+    },
+    "hisitter": {
+      "title": "Hi sitter",
+      "description": "Babysitter and childcare service booking platform."
+    },
+    "wawa": {
+      "title": "Wawa",
+      "description": "Application for adopting pets and locating them."
+    },
+    "viewLive": "View Live",
+    "github": "GitHub"
+  },
+  "contact": {
+    "heading": "Contact",
+    "email": "Email",
+    "phoneNumber": "Phone Number",
+    "copy": "Copy",
+    "copied": "Copied!",
+    "copyToClipboard": "Copy {field} to clipboard",
+    "downloadCV": "Download CV"
+  },
+  "footer": {
+    "text": "Layout and designed with 💛 by <strong>Abdiel Ortega and Esteban Ladino</strong> © 2023"
+  },
+  "a11y": {
+    "skipToContent": "Skip to main content"
+  },
+  "aria": {
+    "closeMenu": "Close navigation menu",
+    "openMenu": "Open navigation menu",
+    "switchToLight": "Switch to light mode",
+    "switchToDark": "Switch to dark mode",
+    "mainContent": "Main content"
+  },
+  "language": {
+    "select": "Select language",
+    "english": "English",
+    "spanish": "Spanish"
+  }
+}

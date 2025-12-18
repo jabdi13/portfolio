@@ -1,14 +1,30 @@
 "use client"
-import { BurgerIconMenu } from "./BurgerIconMenu"
-import { CloseMenu } from "./CloseMenu"
-import { DarkModeToggle } from "./DarkModeToggle"
+
+import { useState } from "react";
+import Image from "next/image";
+import { useTranslations } from 'next-intl';
+import { BurgerIconMenu } from "./BurgerIconMenu";
+import { CloseMenu } from "./CloseMenu";
+import { DarkModeToggle } from "./DarkModeToggle";
+import { LanguageSwitcher } from "./LanguageSwitcher";
+import { useActiveSection } from "../hooks/useActiveSection";
 import OmegaDark from "../../public/images/omega-dark-200.webp";
 import OmegaPowder from "../../public/images/omega-powder-200.webp";
-import Image from "next/image";
-import { useState } from "react";
 
+/**
+ * Navigation Header Component
+ *
+ * Features:
+ * - Responsive mobile hamburger menu
+ * - Active section highlighting based on scroll position
+ * - Dark mode toggle
+ * - Logo with dark/light mode variants
+ */
 export function NavHeader() {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
+  const activeSection = useActiveSection();
+  const t = useTranslations('nav');
+  const tAria = useTranslations('aria');
 
   // Auto-close menu on mobile after navigation
   const handleNavClick = () => {
@@ -16,6 +32,15 @@ export function NavHeader() {
       setIsOpen(false);
     }
   };
+
+  // Navigation links configuration
+  const navLinks = [
+    { href: "#home", label: t('home') },
+    { href: "#about", label: t('about') },
+    { href: "#skills", label: t('skills') },
+    { href: "#projects", label: t('projects') },
+    { href: "#contact", label: t('contact') },
+  ];
 
   return (
     <header className="mainNav absolute left-2/4 top-6 z-10 flex -translate-x-2/4 justify-between items-center rounded-3xl bg-powder-500 dark:bg-powder-900 p-5 text-white dark:text-powder-50 shadow-lg dark:shadow-gold-500/20 border border-powder-600 dark:border-powder-700">
@@ -51,7 +76,7 @@ export function NavHeader() {
             fill="currentColor"
             hidden
             onClick={() => setIsOpen(!isOpen)}
-            onKeyDown={(e) => {
+            onKeyDown={(e: React.KeyboardEvent) => {
               if (e.key === 'Enter' || e.key === ' ') {
                 e.preventDefault();
                 setIsOpen(false);
@@ -59,14 +84,14 @@ export function NavHeader() {
             }}
             tabIndex={0}
             role="button"
-            ariaLabel="Close navigation menu"
+            ariaLabel={tAria('closeMenu')}
           />
         ) : (
           <BurgerIconMenu
             fill="currentColor"
             hidden
             onClick={() => setIsOpen(!isOpen)}
-            onKeyDown={(e) => {
+            onKeyDown={(e: React.KeyboardEvent) => {
               if (e.key === 'Enter' || e.key === ' ') {
                 e.preventDefault();
                 setIsOpen(!isOpen);
@@ -77,7 +102,7 @@ export function NavHeader() {
             }}
             tabIndex={0}
             role="button"
-            ariaLabel={isOpen ? "Close navigation menu" : "Open navigation menu"}
+            ariaLabel={isOpen ? tAria('closeMenu') : tAria('openMenu')}
             ariaExpanded={isOpen}
           />
         )}
@@ -86,14 +111,38 @@ export function NavHeader() {
       {/* Desktop: Nav Links + DarkMode */}
       <nav className={`transition-[max-height] absolute sm:static inset-x-0 top-[50px] text-center bg-powder-500 dark:bg-powder-900 sm:bg-transparent dark:sm:bg-transparent rounded-b-3xl duration-[0.5s] overflow-hidden sm:overflow-visible ${isOpen ? 'max-h-[400px] py-4' : 'max-h-0 p-0'} sm:max-h-none sm:py-0`}>
         <ul className="flex flex-col gap-5 text-lg font-medium sm:flex-row sm:items-center text-white dark:text-powder-50">
-          <li><a href="#home" onClick={handleNavClick} className="hover:text-gold-500 transition-colors">Home</a></li>
-          <li><a href="#about" onClick={handleNavClick} className="hover:text-gold-500 transition-colors">About</a></li>
-          <li><a href="#skills" onClick={handleNavClick} className="hover:text-gold-500 transition-colors">Skills</a></li>
-          <li><a href="#projects" onClick={handleNavClick} className="hover:text-gold-500 transition-colors">Projects</a></li>
-          <li><a href="#contact" onClick={handleNavClick} className="hover:text-gold-500 transition-colors">Contact</a></li>
-          <li className="hidden sm:block"><DarkModeToggle /></li>
+          {navLinks.map(({ href, label }) => {
+            const sectionId = href.replace('#', '');
+            const isActive = activeSection === sectionId;
+
+            return (
+              <li key={href}>
+                <a
+                  href={href}
+                  onClick={handleNavClick}
+                  className={`hover:text-gold-500 transition-all pb-1 ${
+                    isActive
+                      ? 'text-gold-500 border-b-2 border-gold-500'
+                      : 'border-b-2 border-transparent'
+                  }`}
+                  aria-current={isActive ? 'page' : undefined}
+                >
+                  {label}
+                </a>
+              </li>
+            );
+          })}
+          <li className="sm:hidden">
+            <LanguageSwitcher />
+          </li>
+          <li className="hidden sm:block">
+            <DarkModeToggle />
+          </li>
+          <li className="hidden sm:block">
+            <LanguageSwitcher />
+          </li>
         </ul>
       </nav>
     </header>
-  )
+  );
 }

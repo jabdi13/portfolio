@@ -32,7 +32,12 @@ module.exports = {
           600: '#e69a00',
         },
         'navy': '#002244',
-      }
+      },
+      spacing: {
+        '18': '4.5rem',   // 72px - Intermediate spacing
+        '88': '22rem',    // 352px - Large section spacing
+        '100': '25rem',   // 400px - Extra large spacing
+      },
     },
   },
   plugins: [],

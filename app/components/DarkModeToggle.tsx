@@ -1,15 +1,17 @@
 "use client"
 
+import { useTranslations } from 'next-intl';
 import { useDarkMode } from '../context/DarkModeContext';
 
 export function DarkModeToggle() {
   const { isDarkMode, toggleDarkMode } = useDarkMode();
+  const t = useTranslations('aria');
 
   return (
     <button
       onClick={toggleDarkMode}
-      className="relative p-2 rounded-lg bg-transparent hover:bg-powder-100 dark:hover:bg-navy/50 transition-colors focus:outline-none focus-visible:ring-4 focus-visible:ring-gold-500 focus-visible:ring-offset-2"
-      aria-label={isDarkMode ? "Switch to light mode" : "Switch to dark mode"}
+      className="relative p-2 rounded-lg bg-transparent hover:bg-white/10 dark:hover:bg-navy/50 transition-colors focus:outline-none focus-visible:ring-4 focus-visible:ring-gold-400 focus-visible:ring-offset-2"
+      aria-label={isDarkMode ? t('switchToLight') : t('switchToDark')}
     >
       {isDarkMode ? (
         // Sun icon for light mode
@@ -28,7 +30,7 @@ export function DarkModeToggle() {
       ) : (
         // Moon icon for dark mode
         <svg
-          className="w-6 h-6 text-powder-600"
+          className="w-6 h-6 text-white"
           fill="currentColor"
           viewBox="0 0 20 20"
           xmlns="http://www.w3.org/2000/svg"
